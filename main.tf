@@ -38,5 +38,4 @@ resource "appdynamics_eum_application" "app" {
 ############################################################
 output "eum_key" {  
   value = join("", appdynamics_eum_application.app.*)
-  appdynamics_eum_application.app[0]
 }
