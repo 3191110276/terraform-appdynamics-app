@@ -28,7 +28,7 @@ resource "appdynamics_apm_application" "app" {
 resource "appdynamics_eum_application" "app" {
   count = var.create_eum ? 1 : 0
   
-  name = var.name #"${var.app_name}_eum"
+  name = "${var.name}_eum"
   description = var.description
 }
 
