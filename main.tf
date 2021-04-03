@@ -37,5 +37,7 @@ resource "appdynamics_eum_application" "app" {
 # DEFINE EUM KEY OUTPUT
 ############################################################
 output "eum_key" {
+  depends_on = [appdynamics_eum_application.app]
+  
   value = appdynamics_eum_application.app[0]
 }
