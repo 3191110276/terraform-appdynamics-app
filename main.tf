@@ -37,5 +37,5 @@ resource "appdynamics_eum_application" "app" {
 # DEFINE EUM KEY OUTPUT
 ############################################################
 output "eum_key" {  
-  value = join("", appdynamics_eum_application.app.*)
+  value = join("", appdynamics_eum_application.app.*.eum_key)
 }
